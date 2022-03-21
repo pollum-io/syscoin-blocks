@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+description: Indexing all Syscoin Block data
+repository: https://github.com/Pollum-io/syscoin-blocks
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: MultiCall
+    network: syscoin
+    source:
+      address: "0x48023b16c3e81aa7f6effbdeb35bb83f4f31a8fd"
+      abi: MultiCall
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - ConverterAddition
+      abis:
+        - name: MultiCall
+          file: ./abis/MultiCall.json
+      blockHandlers:
+        - handler: handleBlock
+      file: ./src/mappings/blocks.ts

@@ -1,0 +1,16 @@
+{
+  "name": "syscoin-blocks",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://graph.pegasys.finance/deploy/ --ipfs https://graph.pegasys.finance/ipfs/ pollum-io/syscoin-blocks",
+    "create-local": "graph create --node http://localhost:8020/ pollum-io/syscoin-blocks",
+    "remove-local": "graph remove --node http://localhost:8020/ pollum-io/syscoin-blocks",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 pollum-io/syscoin-blocks"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.17.1",
+    "@graphprotocol/graph-ts": "0.17.0"
+  }
+}
