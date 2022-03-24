@@ -4,8 +4,9 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://graph.pegasys.finance/deploy/ --ipfs https://graph.pegasys.finance/ipfs/ pollum-io/syscoin-blocks",
-    "create-local": "graph create --node http://localhost:8020/ pollum-io/syscoin-blocks",
+    "create": "graph create --node https://graph.pegasys.exchange/deploy pollum-io/syscoin-blocks",
+    "deploy": "graph deploy --node https://graph.pegasys.exchange/deploy --ipfs https://ipfs.pegasys.exchange/ pollum-io/syscoin-blocks",
+    "create-local": "graph remove --node https://graph.pegasys.exchange/deploy/ pollum-io/syscoin-blocks",
     "remove-local": "graph remove --node http://localhost:8020/ pollum-io/syscoin-blocks",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 pollum-io/syscoin-blocks"
   },
